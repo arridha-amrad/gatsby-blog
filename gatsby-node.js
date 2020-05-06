@@ -37,7 +37,7 @@ exports.createPages = async ({ actions, graphql }) => {
     const id = edge.node.id
     actions.createPage({
       path: slug,
-      component: require.resolve("./src/templates/singlePost.js"),
+      component: require.resolve(`./src/templates/singlePost.js`),
       context: { id },
     })
   })
