@@ -6,9 +6,9 @@ import { FeaturedImageWrapper } from "../elements"
 export const FeaturedImage = ({ fixed }) => {
   const data = useStaticQuery(graphql`
     query {
-      imageSharp(fixed: { originalName: { eq: "office.jpg" } }) {
-        fixed {
-          ...GatsbyImageSharpFixed
+      imageSharp(fixed: { originalName: { eq: "background.jpg" } }) {
+        fixed(width: 1200) {
+          ...GatsbyImageSharpFixed_noBase64
         }
       }
     }

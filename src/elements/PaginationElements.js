@@ -1,5 +1,7 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
+// since we use Link of Gatsby we need to import react as well
+import React from "react"
 
 export const PaginationWrapper = styled.div`
   grid-column: 2 / span 12;
