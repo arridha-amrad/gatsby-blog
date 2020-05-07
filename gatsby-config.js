@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Gatsby Blog using MDX`,
+    description: `A simple blog built with Gatsby and MDX`,
+    author: `arridha amrad`,
+    image: "/office.jpg",
+    facebookUsername: "arridha amrad",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

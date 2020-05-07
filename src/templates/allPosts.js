@@ -6,12 +6,12 @@ import {
   ContentCard,
   FeaturedImage,
   Pagination,
+  SEO,
 } from "../components"
 
 import { H1, P } from "../elements"
 
 const allPosts = ({ pageContext, data }) => {
-  console.log(pageContext)
   const { currentPage, numpages } = pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numpages
@@ -21,6 +21,8 @@ const allPosts = ({ pageContext, data }) => {
   const posts = data.allMdx.edges
   return (
     <Container>
+      {/* here we rely on default value we have created */}
+      <SEO />
       <FeaturedImage />
       <Content>
         <H1 textAlign="center" margin="0 0 1rem 0">
