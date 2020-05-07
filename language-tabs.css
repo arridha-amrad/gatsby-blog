@@ -1,0 +1,56 @@
+.gatsby-highlight {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.gatsby-highlight pre {
+  padding: 1rem;
+  font-size: 1.3rem;
+  overflow-x: scroll;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.gatsby-highlight pre[class*="language-"]:before {
+  background: #000;
+  border-radius: 0 0 0.25rem 0.25rem;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 0.025rem;
+  padding: 0.1rem 0.5rem;
+  position: absolute;
+  right: 1rem;
+  text-align: right;
+  text-transform: uppercase;
+  top: 0;
+}
+.gatsby-highlight pre[class~="language-js"]::before {
+  content: "js";
+  background: #f7df1e;
+  color: black;
+  margin: auto;
+}
+
+.gatsby-highlight pre[class~="language-html"]::before {
+  content: "html";
+  background: #005a9c;
+  color: white;
+}
+
+.gatsby-highlight pre[class~="language-css"]::before {
+  content: "css";
+  background: #ff9800;
+  color: white;
+}
+
+.paragraph {
+  color: red;
+}
+
+.myquote {
+  width: 80px;
+  height: 80px;
+}

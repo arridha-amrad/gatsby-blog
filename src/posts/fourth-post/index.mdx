@@ -1,7 +1,107 @@
 ---
 title: My Fourth Post
 slug: fourth-post
-date: 20202-03-24
+date: 2020-03-24
 featureImage: island.jpg
 excerpt: Donec pretium odio in enim elementum tincidunt. Vestibulum accumsan, sem sit amet aliquam interdum, ipsum diam dignissim enim.
 ---
+
+# Arridha Amrad
+
+created at : Mei-07-2020
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.{: .paragraph }
+
+![Island Photo](island.jpg)
+
+```html
+<div>Hello World</div>
+```
+
+```css
+.gatsby-highlight {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.gatsby-highlight pre {
+  padding: 1rem;
+  font-size: 1.3rem;
+  overflow-x: scroll;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.gatsby-highlight pre[class*="language-"]:before {
+  background: #000;
+  border-radius: 0 0 0.25rem 0.25rem;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 0.025rem;
+  padding: 0.1rem 0.5rem;
+  position: absolute;
+  right: 1rem;
+  text-align: right;
+  text-transform: uppercase;
+  top: 0;
+}
+.gatsby-highlight pre[class~="language-js"]::before {
+  content: "js";
+  background: #f7df1e;
+  color: black;
+  margin: auto;
+}
+
+.gatsby-highlight pre[class~="language-html"]::before {
+  content: "html";
+  background: #005a9c;
+  color: white;
+}
+
+.gatsby-highlight pre[class~="language-css"]::before {
+  content: "css";
+  background: #ff9800;
+  color: white;
+}
+```
+
+```js
+import React from "react"
+import Highlight, { defaultProps } from "prism-react-renderer"
+import theme from "prism-react-renderer/themes/vsDark"
+
+export const Code = ({ codeString, language, ...props }) => {
+  return (
+    <Highlight
+      {...defaultProps}
+      code={codeString}
+      language={language}
+      theme={theme}
+    >
+      {({ className, style, tokens, getLineProps, getTokenProps }) => (
+        <div className="gatsby-highlight" data-language={language}>
+          <pre className={className} style={style}>
+            {tokens.map((line, i) => (
+              <div {...getLineProps({ line, key: i })}>
+                {line.map((token, key) => (
+                  <span {...getTokenProps({ token, key })} />
+                ))}
+              </div>
+            ))}
+          </pre>
+        </div>
+      )}
+    </Highlight>
+  )
+}
+```
+
+> Quisque quis dapibus neque, at facilisis enim. Nulla ipsum mi, malesuada id mattis et, blandit eget est.
+
+| Syntax    | Description |
+| --------- | ----------- |
+| Header    | Title       |
+| Paragraph | Text        |
